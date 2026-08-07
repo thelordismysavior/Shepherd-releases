@@ -8,7 +8,7 @@ Shepherd is not available in the Google Play Store. Install it from this page, t
 
 ➡️ **[Download Shepherd](https://github.com/thelordismysavior/Shepherd-releases/releases/latest)**
 
-On the release page, tap **`shepherd-1.0.0-2.apk`** to download.
+On the release page, tap **`shepherd-1.0.1-3.apk`** to download.
 
 ## First-time install (or upgrading from an older Shepherd)
 
@@ -32,19 +32,15 @@ Once you have this version installed:
 
 Tip: if an update is interrupted, Shepherd can usually continue without downloading the whole file again.
 
-## What’s new in Shepherd 1.0.0 (release 2)
+## What’s new in Shepherd 1.0.1 (release 3)
 
-- **Easier updates** — Shepherd can now notify you when a new version is ready and help you install it
-- **Live planning together** — changes to services, programs, roles, people, and templates can appear for other planners without needing a manual refresh
-- **Safer shared editing** — when two people edit compatible things, both changes can be kept; when they clash, Shepherd asks for a clear decision instead of silently overwriting work
-- **Works offline, then catches up** — unfinished saves can stay on your device and sync when you’re back online
-- **See who’s editing** — you’ll get a gentle notice when someone else is working in the same program
-- **More reliable planning** — everyday planning, syncing, and account access are steadier behind the scenes
-- **Stronger security** — important account and data protections have been tightened
+- **Cleaner planning updates** — the "saved" notice is easier to see; it appears as a small floating chip and hides itself after a few seconds
+- **Fixing the right person** — editing a role now renames or reassigns the existing person instead of creating a duplicate
+- **Better feedback when removing someone** — removing a person from a role now shows a clear message when it can't be done, instead of a connection error
 
 ## Need help?
 
-- Prefer the full release notes? See [Shepherd 1.0.0 (release 2)](https://github.com/thelordismysavior/Shepherd-releases/releases/tag/shepherd-1.0.0-2).
+- Prefer the full release notes? See [Shepherd 1.0.1 (release 3)](https://github.com/thelordismysavior/Shepherd-releases/releases/tag/shepherd-1.0.1-3).
 - If install is blocked, check Android Settings for **Install unknown apps** / **Allow from this source**.
 - If something looks wrong after updating, reopen Shepherd and confirm your schedule data is still present before making more changes.
 
