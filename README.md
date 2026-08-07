@@ -1,84 +1,49 @@
-# Shepherd release artifacts
+# Shepherd for Android
 
-This repository publishes **immutable signed Shepherd Android App Release APKs**.
-It is not the application source repository.
+This page is where you download **Shepherd**, the church planning app for Android.
 
-## What ships here
+Shepherd is not available in the Google Play Store. Install it from this page, then later updates can be offered inside the app.
 
-Each GitHub Release holds one universal APK for package
-`com.maxidiayni.shepherd`, named `shepherd-<versionLabel>-<releaseNumber>.apk`.
-Release assets are never overwritten. The public updater manifest
-(`latest.json` in Supabase Storage) points at the current immutable APK URL in
-this repository.
+## Download the latest version
 
-| Field | Meaning |
-| --- | --- |
-| `versionLabel` | Manual `major.minor.patch` label shown to users |
-| `releaseNumber` | Android `versionCode`; the only value used to decide “newer” |
-| APK URL | Absolute HTTPS URL to this repository’s Release asset |
-| Size + MD5 | Corruption check before Android verifies package identity and signature |
+➡️ **[Download Shepherd](https://github.com/thelordismysavior/Shepherd-releases/releases/latest)**
 
-## In-app auto updates
+On the release page, tap **`shepherd-1.0.0-2.apk`** to download.
 
-Updater-enabled Shepherd builds check the public manifest after the normal Sign
-In or Home screen appears:
+## First-time install (or upgrading from an older Shepherd)
 
-1. If `releaseNumber` is higher than the installed App Release, Shepherd offers
-   **Update** or **Later**.
-2. **Update** downloads the APK with visible progress, verifies size and MD5,
-   then opens Android’s package installer. Shepherd never silently installs.
-3. **Later** dismisses the prompt for the current process; a cold launch offers
-   the same newer release again.
-4. Verified downloads are reused across retries; cancelled, corrupt, superseded,
-   or already-installed cache files are cleaned up.
-5. If install-from-source permission is missing, Shepherd guides the user to
-   Settings and keeps the verified APK for retry.
+1. Download the APK using the link above.
+2. Open the downloaded file on your phone.
+3. If Android asks for permission, turn on **Allow from this source** for your browser or file manager, then try again.
+4. Tap **Install**.
+5. Open Shepherd and confirm your plans are still there.
 
-Development builds, Expo Go, iOS, and web do not fetch or install App Releases.
-Existing devices need one manual bootstrap install of an updater-enabled APK;
-later releases can be offered from inside Shepherd.
+**Important:** Install over your existing Shepherd app. If Android asks you to uninstall first, cancel that and ask for help instead — uninstalling can remove local data.
 
-## Latest App Release: `shepherd-1.0.0-2`
+## How updates work after this version
 
-Published artifact:
-[`shepherd-1.0.0-2.apk`](https://github.com/thelordismysavior/Shepherd-releases/releases/tag/shepherd-1.0.0-2)
+Once you have this version installed:
 
-This App Release includes the first updater-enabled production build
-(`versionLabel` `1.0.0`, `releaseNumber` `2`) and the product work that landed
-with it in Shepherd:
+1. Open Shepherd as usual (Sign In or Home will appear first).
+2. If a newer version is available, Shepherd asks whether to **Update** or choose **Later**.
+3. **Update** downloads the new version with a progress bar, checks the file, then opens Android’s installer for you to confirm.
+4. **Later** skips the update for now. The next time you fully close and reopen Shepherd, you may be asked again.
+5. Shepherd never installs an update quietly in the background — you always approve the install.
 
-- **Auto updates** — optional in-app App Release detection, download,
-  verification, recoverable installation, and verified-cache reuse
-- **Realtime planning collaboration** — ordered Planning Changes for Events,
-  Programs, Roles, People, templates, and recurring patterns; offline pending
-  replay; conflict authority; editing presence; resilient live delivery
-- **Deepened core modules** — stronger synchronization, Event planning, and
-  Account-access seams behind the existing planner experience
-- **Security hardening** — tighter SECURITY DEFINER grants, explicit deny-all
-  RLS on internal tables, and Performance Advisor index/RLS init-plan fixes
+Tip: if an update is interrupted, Shepherd can usually continue without downloading the whole file again.
 
-Full notes:
-[Release shepherd-1.0.0-2](https://github.com/thelordismysavior/Shepherd-releases/releases/tag/shepherd-1.0.0-2)
+## What’s new in Shepherd 1.0.0 (release 2)
 
+- **Easier updates** — Shepherd can now notify you when a new version is ready and help you install it
+- **Live planning together** — changes to services, programs, roles, people, and templates can appear for other planners without needing a manual refresh
+- **Safer shared editing** — when two people edit compatible things, both changes can be kept; when they clash, Shepherd asks for a clear decision instead of silently overwriting work
+- **Works offline, then catches up** — unfinished saves can stay on your device and sync when you’re back online
+- **See who’s editing** — you’ll get a gentle notice when someone else is working in the same program
+- **More reliable planning** — everyday planning, syncing, and account access are steadier behind the scenes
+- **Stronger security** — important account and data protections have been tightened
 
-## Install bootstrap
+## Need help?
 
-1. Download the current APK from the
-   [latest GitHub Release](https://github.com/thelordismysavior/Shepherd-releases/releases/latest).
-2. Install it in place over existing Shepherd. Decline any Android prompt that
-   asks to uninstall first; investigate package identity or signing credentials
-   instead.
-3. Enable **Allow from this source** for Shepherd if Android blocks the install.
-4. Confirm Shepherd opens and local Planning Data remains present.
-5. Later updater-enabled launches can offer newer App Releases from the public
-   manifest.
-
-## Integrity
-
-- Package name remains `com.maxidiayni.shepherd`.
-- APKs keep the existing EAS-managed signing identity so Android can update in
-  place without removing data.
-- MD5 in `latest.json` is a corruption check only; Android verifies package
-  name, signing certificate, release number, and final installation.
-- Recovery from a bad release always moves forward with a higher
-  `releaseNumber`; do not republish or downgrade an existing asset.
+- Prefer the full release notes? See [Shepherd 1.0.0 (release 2)](https://github.com/thelordismysavior/Shepherd-releases/releases/tag/shepherd-1.0.0-2).
+- If install is blocked, check Android Settings for **Install unknown apps** / **Allow from this source**.
+- If something looks wrong after updating, reopen Shepherd and confirm your schedule data is still present before making more changes.
