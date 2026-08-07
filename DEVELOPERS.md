@@ -41,12 +41,35 @@ Development builds, Expo Go, iOS, and web do not fetch or install App Releases.
 Existing devices need one manual bootstrap install of an updater-enabled APK;
 later releases can be offered from inside Shepherd.
 
-## Latest App Release: `shepherd-1.0.0-2`
+## Latest App Release: `shepherd-1.0.1-3`
+
+Published artifact:
+[`shepherd-1.0.1-3.apk`](https://github.com/thelordismysavior/Shepherd-releases/releases/tag/shepherd-1.0.1-3)
+
+This App Release (`versionLabel` `1.0.1`, `releaseNumber` `3`) updates
+Shepherd 1.0.0 (release 2) in place and includes the product fixes that landed
+with it in Shepherd:
+
+- **Cleaner planning updates** — the saved notice now appears as a small
+  floating StatusChip that hides itself after a few seconds
+- **Role edits fix the right person** — editing a role renames or reassigns
+  the existing person instead of creating a duplicate
+- **Clearer assigned-Person delete errors** — removing a person from a role
+  shows the business error instead of a connection retry message
+- **Hardened error handling** — assigned-Person delete and review follow-up
+  fixes
+
+Public release notes:
+[Shepherd 1.0.1 (release 3)](https://github.com/thelordismysavior/Shepherd-releases/releases/tag/shepherd-1.0.1-3)
+
+Technical release notes for this build are included below.
+
+## Previous release: `shepherd-1.0.0-2`
 
 Published artifact:
 [`shepherd-1.0.0-2.apk`](https://github.com/thelordismysavior/Shepherd-releases/releases/tag/shepherd-1.0.0-2)
 
-This App Release includes the first updater-enabled production build
+This App Release included the first updater-enabled production build
 (`versionLabel` `1.0.0`, `releaseNumber` `2`) and the product work that landed
 with it in Shepherd:
 
@@ -64,7 +87,6 @@ Public release notes:
 [Shepherd 1.0.0 (release 2)](https://github.com/thelordismysavior/Shepherd-releases/releases/tag/shepherd-1.0.0-2)
 
 Technical release notes for this build are included below.
-
 ## Install bootstrap
 
 1. Download the current APK from the
