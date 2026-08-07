@@ -56,30 +56,10 @@ with it in Shepherd:
   Account-access seams behind the existing planner experience
 - **Security hardening** — tighter SECURITY DEFINER grants, explicit deny-all
   RLS on internal tables, and Performance Advisor index/RLS init-plan fixes
-- **Database migrations** — accompanying Supabase schema/security/collaboration
-  migrations must be applied from the main Shepherd repository before relying
-  on the collaboration and hardened server paths (see below)
 
 Full notes:
 [Release shepherd-1.0.0-2](https://github.com/thelordismysavior/Shepherd-releases/releases/tag/shepherd-1.0.0-2)
 
-## Operator note: database migrations
-
-The APK alone does not migrate Supabase. Operators should apply the Shepherd
-repository’s versioned migrations (or equivalent schema) before expecting this
-App Release’s collaboration and hardened server behavior in production. Areas
-covered by the accompanying migration set include:
-
-- Normalized planning data and collaborative Planning Change delivery
-- Offline-safe planning conflict/authority and live-delivery support
-- Signup-role enforcement and SECURITY DEFINER grant hardening
-- Internal-table RLS deny-all boundaries
-- Performance Advisor foreign-key indexes and RLS init-plan rewrites
-
-Use the main repository’s migration workflow (`supabase migration list`,
-`supabase db push`, and the documented replay-safe baseline) after backing up
-the hosted database. Publishing an APK to this repository never runs those
-migrations.
 
 ## Install bootstrap
 
