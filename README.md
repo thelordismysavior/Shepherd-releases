@@ -47,3 +47,10 @@ Tip: if an update is interrupted, Shepherd can usually continue without download
 - Prefer the full release notes? See [Shepherd 1.0.0 (release 2)](https://github.com/thelordismysavior/Shepherd-releases/releases/tag/shepherd-1.0.0-2).
 - If install is blocked, check Android Settings for **Install unknown apps** / **Allow from this source**.
 - If something looks wrong after updating, reopen Shepherd and confirm your schedule data is still present before making more changes.
+
+## For developers
+
+Looking for the technical release contract, auto-update details, integrity
+rules, and the previous developer-oriented notes for this release?
+
+➡️ **[Developer docs](./DEVELOPERS.md)**
