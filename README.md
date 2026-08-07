@@ -1,9 +1,7 @@
 # Shepherd release artifacts
 
 This repository publishes **immutable signed Shepherd Android App Release APKs**.
-It is not the application source repository. Source, Supabase migrations, and
-operator procedures live in
-[thelordismysavior/Shepherd](https://github.com/thelordismysavior/Shepherd).
+It is not the application source repository.
 
 ## What ships here
 
@@ -104,11 +102,3 @@ migrations.
   name, signing certificate, release number, and final installation.
 - Recovery from a bad release always moves forward with a higher
   `releaseNumber`; do not republish or downgrade an existing asset.
-
-## Source and procedures
-
-- Application source: [Shepherd](https://github.com/thelordismysavior/Shepherd)
-- Publishing procedure:
-  [docs/app-releases.md](https://github.com/thelordismysavior/Shepherd/blob/main/docs/app-releases.md)
-- Distribution decision:
-  [ADR 0002](https://github.com/thelordismysavior/Shepherd/blob/main/docs/adr/0002-deliver-signed-sideloaded-app-releases.md)
